@@ -26,9 +26,11 @@ app.listen(3000, async () => {
     // const tweets = await Tweet.find({userEmail: 'rishav@gmail.com'});
     // console.log(tweets)
 
-    // const tweetRepo = new TweetRepository();
+    const tweetRepo = new TweetRepository();
     // const tweet = await tweetRepo.update('6417019aa1b388b29e4d7190',{content:'Hi this is rishav'});
     // console.log(tweet);
+    const tweet = await tweetRepo.create({content: 'With hooks now'});
+    console.log(tweet);
 
 
 });
