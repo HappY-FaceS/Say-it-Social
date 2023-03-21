@@ -2,35 +2,22 @@ const express = require('express');
 const app = express();
 
 const connect = require('./config/database');
+const PORT=3000;
 
-const Tweet = require('./models/tweet');
-const Comment = require('./models/comment');
+const TweetService = require('./services/tweet-service')
 
-const TweetRepository = require('./repository/tweet-repository');
-
-
-app.listen(3000, async () => {
-    console.log('server started');
+app.listen(PORT, async () => {
+    console.log('server started at',PORT);
     await connect();
-    console.log('Mongo db connected');
+    console.log('Mongo db connected')
+    
+    //create a tweet and update the tags in hashtag db
 
-    // const tweet = await Tweet.create({
-    //    content: 'welcome to twitter',
-    //    userEmail: 'rishav@gmail.com',
-    // });
-    // const comment =await Comment.create({content:'Jai Shree Ram !'});
-    // tweet.comments.push(comment);
-    // await tweet.save();
-    // console.log(tweet);
+    //  let service= new TweetService();
+    //  const tweet= await service.create({
+    //     content: 'Welcome ,I am #travel vlogger . i am #Excited to share #videos with u',
 
-    // const tweets = await Tweet.find({userEmail: 'rishav@gmail.com'});
-    // console.log(tweets)
-
-    const tweetRepo = new TweetRepository();
-    // const tweet = await tweetRepo.update('6417019aa1b388b29e4d7190',{content:'Hi this is rishav'});
-    // console.log(tweet);
-    const tweet = await tweetRepo.create({content: 'With hooks now'});
-    console.log(tweet);
-
+    //  });
+    //  console.log(tweet);
 
 });
