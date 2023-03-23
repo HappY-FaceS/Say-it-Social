@@ -1,9 +1,8 @@
-import { LikeRespository, TweetRepository } from '../repository/index.js';
-import Tweet from '../models/tweet.js';
+import { LikeRepository, TweetRepository } from '../repository/index.js';
 
 class LikeService {
     constructor() {
-        this.likeRepository = new LikeRespository();
+        this.likeRepository = new LikeRepository();
         this.tweetRepository = new TweetRepository();
     }
 
