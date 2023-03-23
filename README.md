@@ -31,6 +31,8 @@
 
 - express ( for Node.js server)
 - mongoose ( ORM for MongoDb )
+- bcrypt ( For Decyrpting & Encrypting user password)
+- Passport.js ( For Authentication of user - JWT Token based)
 
 # To Run on Local:
 
