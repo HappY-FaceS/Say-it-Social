@@ -16,7 +16,7 @@ router.post('/login', login);
 router.post('/tweets', authenticate, createTweet);
 router.get('/tweets/:id', getTweet);
 
-router.post('/likes',toggleLike);
+router.post('/likes',authenticate, toggleLike);
 
 router.post('/comments', authenticate, createComment);
 

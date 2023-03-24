@@ -6,7 +6,7 @@
 
 - User should be able to create a post
     - [The post/tweet cannot be more than 250 chars]
-    - [Every post/tweet will be having support for image upload]
+    - [Every post/tweet will be having support for image upload- Using AWS S3]
 
 - Any post should be visible to all those users who follows the author
 - Anyone who follows you can comment on a post/tweet
@@ -33,12 +33,17 @@
 - mongoose ( ORM for MongoDb )
 - bcrypt ( For Decyrpting & Encrypting user password)
 - Passport.js ( For Authentication of user - JWT Token based)
+- JEST ( For Unit Testing )
+
+// https://how-to.dev/how-to-set-up-jest-for-es-module
 
 # To Run on Local:
 
 - run `git clone <repo_link>` on your terminal to clone the project on your local.
 - run `npm install` to install all the dependencies.
 - Install MongoDb & start the service.
-- Run `mongosh --port 27017` command on cmd.
+- Run `mongosh --port 27017` command on cmd & Open/Connect MpmgoDb Compass.
 - Run `npm start` from your project terminal
      we are good to go Now ....
+- `npm run test` for unit test to run 
+- `npx jest --coverage` for code coverage
